@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Sheet from "../../layouts/Sheet.astro";
+import { byNewest, formatDate, isoDate } from "../../lib/format";
+
+const posts = (await getCollection("wydanie")).sort(byNewest);
+---
+<Sheet
+  title="Wydanie | 6th"
+  description="Numery gazety 6th od najnowszego. Olga Szewc zapisuje to, co widać z chodnika."
+>
+  <header class="sx-page">
+    <p class="sx-kicker">Spis</p>
+    <h1>Wydanie</h1>
+    <p>Numery od najnowszego. Każdy jest z chodnika, z jednego przejścia, bez dokładania tego, czego nie było widać.</p>
+  </header>
+  <section class="sx-rest" aria-label="Wszystkie numery">
+    {posts.map((post) => (
+      <article class="sx-row">
+        <div>
+          <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+          <p class="sx-kicker">{post.data.category}</p>
+        </div>
+        <h2><a href={`/wydanie/${post.slug}/`}>{post.data.title}</a></h2>
+      </article>
+    ))}
+  </section>
+</Sheet>

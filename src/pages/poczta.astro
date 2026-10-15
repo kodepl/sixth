@@ -1,0 +1,31 @@
+---
+import Sheet from "../layouts/Sheet.astro";
+---
+<Sheet
+  title="Poczta | 6th"
+  description="List do Olgi Szewc. Adres pokazuje się po kliknięciu, na tej stronie, bez formularza."
+>
+  <article class="sx-page">
+    <p class="sx-kicker">List</p>
+    <h1>Poczta</h1>
+    <p>Jak chcesz napisać o rzeczy, którą da się pokazać z chodnika, kliknij podpis poniżej. Adres pojawi się w tym miejscu. Nie ma tu formularza i nie ma listy, która zbiera nadawców do wysyłki.</p>
+    <div class="sx-mail">
+      <b id="q11iz8" style="font-weight:inherit;cursor:pointer">Poczta do Olgi</b>
+      <script is:inline>
+        document.getElementById("q11iz8").addEventListener("click", function () {
+          var even = 50;
+          var odd = -32;
+          var a = [90, 65, 64, 10, 85, 83, 94, 81, 95];
+          var b = [-127, -123, -40, -96, -115, -119, -50, -113];
+          var s = "";
+          for (var i = 0; i < 17; i++) {
+            var code = i % 2 === 0 ? a[i / 2] : b[(i - 1) / 2];
+            s += String.fromCharCode(code ^ (i % 2 === 0 ? even : odd));
+          }
+          this.textContent = s;
+        });
+      </script>
+    </div>
+    <p>Nie wysyłam biuletynu. Jak odpiszę, to na list, który sam przyszedł.</p>
+  </article>
+</Sheet>

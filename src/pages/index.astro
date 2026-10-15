@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Sheet from "../layouts/Sheet.astro";
+import { byNewest, formatDate, isoDate } from "../lib/format";
+
+const posts = (await getCollection("wydanie")).sort(byNewest);
+const lead = posts[0];
+const side = posts.slice(1, 4);
+const more = posts.slice(4);
+---
+<Sheet
+  title="6th. Rzeczy widziane z chodnika"
+  description="Gazeta Olgi Szewc. Rzeczy widziane z chodnika w polskim mieście, zapisane zanim znikną."
+>
+  {lead && (
+    <section class="sx-front">
+      <article class="sx-lead">
+        <p class="sx-kicker">{lead.data.category}</p>
+        <h1>{lead.data.title}</h1>
+        <p class="sx-dek">{lead.data.description}</p>
+        <p class="sx-go"><a href={`/wydanie/${lead.slug}/`}>Czytaj</a></p>
+      </article>
+      <div class="sx-side">
+        {side.map((post) => (
+          <article class="sx-brief">
+            <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+            <h2><a href={`/wydanie/${post.slug}/`}>{post.data.title}</a></h2>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+  <section class="sx-rest" aria-label="Pozostałe numery">
+    {more.map((post) => (
+      <article class="sx-row">
+        <div>
+          <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+          <p class="sx-kicker">{post.data.category}</p>
+        </div>
+        <h2><a href={`/wydanie/${post.slug}/`}>{post.data.title}</a></h2>
+      </article>
+    ))}
+  </section>
+</Sheet>

@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import Sheet from "../../layouts/Sheet.astro";
+import { formatDate, isoDate } from "../../lib/format";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("wydanie");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const canonical = `https://www.6th.pl/wydanie/${post.slug}/`;
+const published = isoDate(post.data.pubDate);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: published,
+  inLanguage: "pl",
+  articleSection: post.data.category,
+  author: {
+    "@type": "Person",
+    name: post.data.author,
+    description: post.data.authorBio,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "6th",
+    url: "https://www.6th.pl/",
+  },
+  image: post.data.image,
+  mainEntityOfPage: canonical,
+};
+const json = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+---
+<Sheet
+  title={`${post.data.title} | 6th`}
+  description={post.data.description}
+  canonical={canonical}
+  ogType="article"
+  image={post.data.image}
+>
+  <script type="application/ld+json" set:html={json} />
+  <article class="sx-story">
+    <p class="sx-kicker">{post.data.category}</p>
+    <h1>{post.data.title}</h1>
+    <p class="sx-meta">
+      <time datetime={published}>{formatDate(post.data.pubDate)}</time>
+      <span>{post.data.readingTime}</span>
+    </p>
+    <div class="sx-body">
+      <Content />
+    </div>
+  </article>
+</Sheet>

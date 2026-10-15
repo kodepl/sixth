@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { byNewest, formatDate, isoDate } from "../lib/format";
+import "../styles/paper.css";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: "website" | "article";
+  image?: string;
+}
+
+const { title, description, canonical, ogType = "website", image } = Astro.props;
+const origin = "https://www.6th.pl";
+const href = canonical || new URL(Astro.url.pathname, origin).href;
+const posts = (await getCollection("wydanie")).sort(byNewest);
+const latest = posts[0];
+const issued = latest ? formatDate(latest.data.pubDate) : "";
+const issuedIso = latest ? isoDate(latest.data.pubDate) : "";
+---
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={href} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content="6th" />
+    {image && <meta property="og:image" content={image} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="sx-skip" href="#sx-tresc">Przejdź do treści</a>
+    <header class="sx-mast">
+      <div class="sx-bar">
+        <a class="sx-name" href="/">6th</a>
+        {latest && (
+          <p class="sx-issued"><time datetime={issuedIso}>{issued}</time></p>
+        )}
+        <nav class="sx-nav" aria-label="Główne">
+          <a href="/wydanie/">Wydanie</a>
+          <a href="/redakcja/">Redakcja</a>
+          <a href="/poczta/">Poczta</a>
+        </nav>
+      </div>
+      <div class="sx-red" aria-hidden="true"></div>
+    </header>
+    <div class="sx-wrap">
+      <main class="sx-main" id="sx-tresc">
+        <slot />
+      </main>
+      <footer class="sx-colo">
+        <p>6th. Olga Szewc. Numer bieżący bez redakcji przy ulicy.</p>
+        <a href="/prywatnosc/">Prywatność</a>
+      </footer>
+    </div>
+  </body>
+</html>
