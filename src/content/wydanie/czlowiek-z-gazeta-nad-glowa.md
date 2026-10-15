@@ -9,7 +9,7 @@ tags:
   - "deszcz"
   - "gazeta"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1477959858617?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw deszczu z Unsplash, nie zdjęcie Olgi z tego dnia. Człowiek z gazetą tu nie idzie."
 ---
 

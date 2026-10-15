@@ -9,7 +9,7 @@ tags:
   - "kawa"
   - "godzina"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1445116572660?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw kawiarni z Unsplash, nie zdjęcie Olgi z tego dnia. To nie jest lokal zamykany o szesnastej."
 ---
 

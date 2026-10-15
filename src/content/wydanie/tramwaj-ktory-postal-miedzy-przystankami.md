@@ -9,7 +9,7 @@ tags:
   - "tramwaj"
   - "chodnik"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1467269204594?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw tramwaju z Unsplash, nie zdjęcie Olgi z tego dnia. Wagon z postoju tu nie stoi."
 ---
 

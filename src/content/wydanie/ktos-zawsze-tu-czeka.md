@@ -9,7 +9,7 @@ tags:
   - "przystanek"
   - "czekanie"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1469474968028?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw przystanku z Unsplash, nie zdjęcie Olgi z tego dnia. Ławka z tekstu tu nie stoi."
 ---
 

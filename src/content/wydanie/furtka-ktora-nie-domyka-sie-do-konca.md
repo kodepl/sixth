@@ -9,7 +9,7 @@ tags:
   - "brama"
   - "furtka"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1511920170033?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw bramy z Unsplash, nie zdjęcie Olgi z tego dnia. Ta furtka nie jest na zdjęciu."
 ---
 

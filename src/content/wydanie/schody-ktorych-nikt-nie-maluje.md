@@ -9,7 +9,7 @@ tags:
   - "podwórko"
   - "schody"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1554118811?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw podwórza z Unsplash, nie zdjęcie Olgi z tego dnia. Schody z tekstu są gdzie indziej."
 ---
 

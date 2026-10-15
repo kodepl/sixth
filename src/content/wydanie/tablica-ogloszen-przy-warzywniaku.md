@@ -9,7 +9,7 @@ tags:
   - "warzywniak"
   - "ogłoszenie"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1449824913935?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw ulicy z Unsplash, nie zdjęcie Olgi z tego dnia. Tablica przy warzywniaku nie jest na tym kadrze."
 ---
 

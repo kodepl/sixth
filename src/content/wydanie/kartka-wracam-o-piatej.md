@@ -9,7 +9,7 @@ tags:
   - "drzwi"
   - "kartka"
 readingTime: "3 min"
-image: "https://images.unsplash.com/photo-1604719312566?auto=format&fit=crop&w=1600&q=80"
+image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1600&q=80"
 imageCaption: "Motyw drzwi z Unsplash, nie zdjęcie Olgi z tego dnia. Kartki o piątej tu nie ma."
 ---
 
