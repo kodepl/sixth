@@ -9,7 +9,6 @@ category: "Chodnik"
 tags: ["ankieta", "głosowanie", "decyzja"]
 readingTime: "5 min"
 image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&h=900&q=80"
-imageCaption: "Chodnik po deszczu, motyw z Unsplash."
 ---
 
 ## Godzina spaceru z sąsiadem. Jak ustalić czas bez stania pod drzwiami
