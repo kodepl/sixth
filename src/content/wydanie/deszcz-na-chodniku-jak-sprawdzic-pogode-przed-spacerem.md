@@ -9,7 +9,6 @@ category: "Chodnik"
 tags: ["pogoda", "aplikacja", "rano"]
 readingTime: "6 min"
 image: "https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?auto=format&fit=crop&w=1400&h=900&q=80"
-imageCaption: "Mokry chodnik, motyw z Unsplash."
 ---
 
 Cichy szum deszczu uderzającego o chodnik wprowadza nas w melancholijny nastrój. Ludzie spieszą się do pracy, zdobijając parasolki, a niektórzy, jak ja, marzą o długim spacerze, który jednak musi być dostosowany do kaprysów pogody. W takich chwilach warto wiedzieć, jak szybko sprawdzić prognozę, aby nie zostać zaskoczonym przez deszcz. 
